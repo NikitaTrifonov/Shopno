@@ -1,0 +1,17 @@
+@import 'normalize.scss';
+
+// === Mixins ===
+@mixin font-title {
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin font-button {
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin font-subtitle {
+    font-family: 'Merriweather', serif;
+}
+@mixin font-content {
+    font-family: 'Raleway', sans-serif;
+}
+
+// === /Mixins ===
