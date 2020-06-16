@@ -15,3 +15,98 @@
 }
 
 // === /Mixins ===
+
+// ===  Variables ===
+
+$color-white: #ffffff;
+
+// ===  /Variables ===
+
+// ===  Common ===
+*{
+    box-sizing: border-box;
+}
+
+body{
+    @include font-content;
+
+    color: #000000;
+}
+
+.section-outer {
+
+}
+.section-inner {
+
+    width: 1140px;
+    margin: 0 auto;
+}
+
+// ===  /Common ===
+
+
+// ===  header ===
+.section-header { 
+
+    .section-inner {
+        height: 100vh;
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(23, 15, 28, .01);
+    }
+
+    &-top {
+        
+        display: flex;
+        justify-content: space-between;
+        margin-top: 64px;
+        margin-bottom: 205px;
+        align-items: center;
+
+        &__logo {
+
+        }
+          
+        &__menu {}
+    
+    &-content {}
+    &-wrapper {}
+}
+}
+// ===  /header ===
+
+// ===  about ===
+// ===  /about ===
+
+// ===  featured ===
+// ===  /featured ===
+
+// ===  service ===
+// ===  /service ===
+
+// ===  team ===
+// ===  /team ===
+
+// ===  feedback ===
+// ===  /feedback ===
+
+// ===  footer-top ===
+// ===  /footer-top ===
+
+// ===  footer-main ===
+// ===  /footer-main ===
+
+// ===  footer-bottom ===
+// ===  /footer-bottom ===
