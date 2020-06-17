@@ -337,3 +337,27 @@ body {
   margin-top: 64px;
   margin-bottom: 205px;
   align-items: center; }
+
+.section-header-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #505050; }
+
+.section-header-wrapper__title {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 45px;
+  line-height: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.3); }
+  .section-header-wrapper__title .title-decor {
+    background-color: #b2f2ee;
+    padding: 0 10px; }
+
+.section-header .title-1 {
+  margin-bottom: 25px; }
+
+.section-header .title-2 {
+  margin-bottom: 150px; }
