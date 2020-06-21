@@ -10,6 +10,9 @@
 @mixin font-subtitle {
     font-family: 'Merriweather', serif;
 }
+@mixin font-description_title {
+    font-family: 'Merriweather', serif;
+}
 @mixin font-content {
     font-family: 'Raleway', sans-serif;
 }
@@ -38,12 +41,7 @@ $color-black: #000000;
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
-    opacity: .65;
-
-       
-    
-    
-
+    opacity: .65;   
 }
 
 .btn-main:active {
@@ -54,7 +52,6 @@ body{
     @include font-content;
 
     color: $color-black;
-   
 }
 
 .section-outer {
@@ -64,6 +61,29 @@ body{
 
     width: 1140px;
     margin: 0 auto;
+}
+
+@mixin title {
+    @include font-title;
+
+    font-size: 38px;
+    line-height: 28px;
+    font-weight: bold;
+    letter-spacing: .06em;    
+    opacity: .9;
+    text-transform: uppercase;
+}
+
+@mixin subtitle {
+    @include font-subtitle;
+
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: .06em;  
+    opacity: .55;
+    text-transform: uppercase;  
+    
 }
 
 // ===  /Common ===
@@ -136,12 +156,12 @@ body{
         } 
         
         &__bottom-box {
-            width: 80%;
-            margin: 0;
+            width: 80%;            
             padding: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            
 
             .btn-wrapper {                
                 padding: 18px 46px;
@@ -156,20 +176,82 @@ body{
                 border-color: #b2f2ee;
                 background-color: #b2f2ee ;
             }
-            
-            
             .bottom-img {
                 align-self: flex-end;
             }
         }
-             
     }
-    
-
 }
 // ===  /header ===
 
 // ===  about ===
+
+.section-about { 
+    
+    // padding: 130px 0 113px 0 ;
+    background-color: #f8f9fa;      
+
+    .section-inner {               
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+    } 
+
+    &__title {
+        @include title;
+        
+        margin-top: 130px;
+        margin-bottom: 16px;
+    }    
+    &__subtitle {
+        @include subtitle;
+
+        margin-bottom: 150px;
+    }
+    &__content {
+        display: flex;
+        margin-bottom: 113px;
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;           
+            
+        }
+
+        &-item {
+            padding-top: 30px;
+            padding-left: 113px;
+            width: 52%;
+
+            &_title {
+               @include font-description_title; 
+
+               font-size: 20px;
+               text-align: 28px;
+               font-weight: bold;
+               letter-spacing: .06em;
+               opacity: .65;
+               text-transform: uppercase;
+               margin-bottom: 30px;
+               
+            }
+            &_text {
+                @include font-content;
+
+                font-size: 16px;
+                line-height: 28px;
+                font-weight: 400;
+                letter-spacing: 0.05em;
+                padding-bottom: 30px;
+                opacity: .60;
+                
+            }
+        }
+    }
+}
+
+
 // ===  /about ===
 
 // ===  featured ===
