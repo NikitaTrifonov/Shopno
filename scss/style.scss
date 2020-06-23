@@ -188,8 +188,8 @@ body{
 
 .section-about { 
     
-    // padding: 130px 0 113px 0 ;
     background-color: #f8f9fa;      
+    padding: 0;
 
     .section-inner {               
             display: flex;
@@ -210,15 +210,40 @@ body{
     }
     &__content {
         display: flex;
-        margin-bottom: 113px;
 
         &-wrapper {
             display: flex;
             flex-direction: column;
-            align-items: center;           
-            
-        }
+            align-items: center;   
 
+            .pagination {
+                margin-top: 36px;
+                margin-bottom: 50px;
+                display: flex;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    cursor: pointer;
+                    width: 9px;
+                    height: 9px;
+                    border: 1px solid #cfcfcf ;
+                    background-color: #cfcfcf;
+                    border-radius: 3px;                 
+
+                    & + li {
+                        margin-left: 4px;
+                    }
+                    a {
+                        text-decoration: none;;
+                    }
+                }
+                .active-img {
+                    background-color: #a4f6eb;
+                    border-color: #a4f6eb; 
+                }
+            }
+     }
         &-item {
             padding-top: 30px;
             padding-left: 113px;
@@ -248,14 +273,55 @@ body{
                 
             }
         }
+    
     }
 }
 
-
+  
 // ===  /about ===
 
-// ===  featured ===
-// ===  /featured ===
+// ===  gallery ===
+.section-gallery {
+    padding-top: 192px;
+    padding-bottom: 113px; 
+
+    .section-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        @include title;
+
+        margin-bottom: 18px;
+    }
+    &__subtitle {
+        @include subtitle;
+
+        margin-bottom: 120px;
+    }
+    &__content {
+        ul {
+            display: flex;
+            flex-flow:  wrap;
+            list-style: none;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            cursor: pointer;
+            margin-top: 13px;
+            margin-left: 15px;
+        }
+        li:nth-child(3n+1){
+            margin-left: 0;
+         }
+    }
+}
+
+// ===  /gallery ===
 
 // ===  service ===
 // ===  /service ===
