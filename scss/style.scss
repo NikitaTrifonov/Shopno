@@ -86,9 +86,12 @@ body{
     
 }
 
-.content-box {
+.item-description {
+    color: $color-white;
+    margin-left: 68px;
+    margin-bottom: 55px;
 
-        .title{
+        &__title{
             @include font-description_title;
 
             font-size: 20px;
@@ -96,26 +99,26 @@ body{
             line-height: 29px;
             letter-spacing: .05em;
             text-transform: uppercase;
-            opacity: .70;
+            opacity: .985;
             margin-bottom: 30px;
 
         }
 
-        .text {
+        &__text {
             @include font-content;
 
             font-size: 16px;
             line-height: 25px;
             font-weight: 400;
             letter-spacing: .02em;
-            opacity: .9;
+            opacity: .8;
             margin-bottom: 60px;
         }
-        .know-more {
+        &__button {
             display: inline; 
-            background-color: #5f5f5f;
+            
 
-            a{
+            .link {
                 @include font-content;
 
                 color: #f9fbfb;
@@ -133,6 +136,13 @@ body{
             
         }
 
+}
+
+@mixin item-wide {
+    flex-basis: 652px;
+}
+@mixin item-narrow {
+    flex-basis: 474px;
 }
 
 // ===  /Common ===
@@ -393,6 +403,7 @@ body{
         margin-bottom: 124px;
     }
     &__content {
+        margin-bottom: 110px;
 
         .items-box {
             margin: 0;
@@ -401,57 +412,84 @@ body{
             flex-flow: wrap;
             list-style: none;
 
-          .item-1 {
+            .item-1 {
+                @include item-wide;
 
-            background: url(/img/section-service/item1.png) no-repeat ;
-            background-size: cover;
-            flex-basis:  55%;
-            
+                background: url(/img/section-service/img1.png) no-repeat ;
+                background-size: cover;
 
-              .wrapper{
-                  padding-left: 65px;
-                  padding-right: 112px;
-                  display: flex;
-                  flex-direction: column;
-                  width: 100%;
-
-
-                    .title {
-                     @include font-description_title;
-
-                        font-size: 20px;
-                        font-weight: bold;
-                        line-height: 29px;
-                        letter-spacing: .06em;
-                        text-transform: uppercase;
-                        opacity: .70;
-                        margin-top: 63px;
-                        margin-bottom: 40px;
-
-                    }
-
-                    .text {
-                        @include font-content;
-                        
-                        font-size: 16px;
-                        line-height: 28px;
-                        font-weight: 400;
-                        letter-spacing: .025em;
-                        opacity: .60;
-                        margin-bottom: 80px;
-                        
-                    }
-                    a {
-                        margin-bottom: 56px;
-                    }
-              }
+                .item-description {
+                    margin-top: 184px;
+                    width: 65%;
+                }
             }
 
             .item-2 {
-                margin-left: 14px;
-                background: url(/img/section-service/item2.png) no-repeat ;
+                @include item-narrow;
+
+                background: url(/img/section-service/img2.png) no-repeat;
                 background-size: cover;
-                flex-basis:  43%;
+
+                .item-description {
+                    margin-top: 184px;
+                    width: 70%;
+                }
+            }
+
+            .item-3 {
+                @include item-wide;
+
+                background: url(/img/section-service/img3.png) no-repeat ;
+                background-size:cover ;
+
+                .item-description {
+                    margin-top: 165px;
+                    width: 65%;
+                }
+            }
+
+            .item-4 {
+                @include item-narrow;
+
+                background: url(/img/section-service/img4.png) no-repeat;
+                background-size: cover;
+
+                .item-description {
+                    margin-top: 165px;
+                    width: 70%;
+                }
+            }
+
+            .item-5 {
+                @include item-narrow;
+
+                background: url(/img/section-service/img5.png) no-repeat;
+                background-size: cover;
+
+                .item-description {
+                    margin-top: 130px;
+                    width: 55%;
+                }
+            }
+
+            .item-6 {
+                @include item-wide;
+
+                background: url(/img/section-service/img6.png) no-repeat ;
+                background-size: cover;
+
+                .item-description {
+                    margin-top: 130px;
+                    width: 65%;
+                }
+            }
+
+            .item {
+                margin-bottom: 14px;
+
+                &:nth-child(even) {
+                    margin-left: 14px;
+                }
             }
         }
     }
@@ -460,6 +498,124 @@ body{
 // ===  /service ===
 
 // ===  team ===
+.section-team {
+    .section-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        @include title;
+        margin-top: 122px;
+        margin-bottom: 16px;
+    }
+    &__subtitle {
+        @include subtitle;
+
+        margin-bottom: 122px;
+    }
+    &__content {
+        .items-box {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-flow: wrap;
+
+            .item {
+                margin-bottom: 12px;
+                margin-left: 14px;
+                position: relative;
+                
+
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    background: url(/img/section-team/info.png) no-repeat;
+                    background-size: cover;
+                    flex-basis: 335px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin-top: 150px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .7s opacity, .7s visibility;
+
+                    &__name {
+                        margin-bottom: 23px;
+                    }
+                    &__description {
+                        @include font-content;
+
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: 0.01em;
+                        font-weight: 400;
+                        opacity: .8;
+                        margin-bottom: 30px;
+                        
+                    }
+
+                    &__links {
+                        opacity: .6;
+                        i {
+                            cursor: pointer;
+                        }
+                    }
+                    a + a {
+                        margin-left: 15px;
+                    }
+
+                    .full-name {
+                        @include font-description_title;
+                        
+                        font-size: 20px;
+                        line-height: 24px;
+                        letter-spacing: 0.05em;
+                        font-weight: bold;
+                        opacity: .95;
+                    }
+                    .profession {
+                        @include font-description_title;
+                        
+                        font-size: 15px;
+                        font-style: italic;
+                        line-height: 24px;
+                        letter-spacing: 0.03em;
+                        font-weight: 400;
+                        opacity: .95;
+                        color: #746f6f;
+                    }
+                    
+                   
+                   .wrapper {
+                       margin-top: 65px;
+                       margin-left: 40px;
+                       width: 70%;
+                       
+                   }
+
+                   
+                }
+
+                &:nth-child(3n+1) {
+                    margin-left: 0;
+                }
+            }
+
+            .item:hover .item-info{
+                opacity: 1;
+                visibility: visible;
+                
+            }
+        }
+    }
+
+}
 // ===  /team ===
 
 // ===  feedback ===
