@@ -138,6 +138,33 @@ body{
 
 }
 
+.pagination {
+    
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li {
+        cursor: pointer;
+        width: 9px;
+        height: 9px;
+        border: 1px solid #cfcfcf ;
+        background-color: #cfcfcf;
+        border-radius: 3px;                 
+
+        & + li {
+            margin-left: 4px;
+        }
+        a {
+            text-decoration: none;;
+        }
+    }
+    .active-img {
+        background-color: #a4f6eb;
+        border-color: #a4f6eb; 
+    }
+}
+
 @mixin item-wide {
     flex-basis: 652px;
 }
@@ -277,30 +304,7 @@ body{
 
             .pagination {
                 margin-top: 36px;
-                margin-bottom: 50px;
-                display: flex;
-                list-style: none;
-                padding: 0;
-
-                li {
-                    cursor: pointer;
-                    width: 9px;
-                    height: 9px;
-                    border: 1px solid #cfcfcf ;
-                    background-color: #cfcfcf;
-                    border-radius: 3px;                 
-
-                    & + li {
-                        margin-left: 4px;
-                    }
-                    a {
-                        text-decoration: none;;
-                    }
-                }
-                .active-img {
-                    background-color: #a4f6eb;
-                    border-color: #a4f6eb; 
-                }
+                margin-bottom: 113px;
             }
      }
         &-item {
@@ -522,6 +526,7 @@ body{
             list-style: none;
             display: flex;
             flex-flow: wrap;
+            margin-bottom: 100px;
 
             .item {
                 margin-bottom: 12px;
@@ -617,13 +622,236 @@ body{
 // ===  /team ===
 
 // ===  feedback ===
+    .section-feedback {
+        background-color: #f9fafb;
+        .section-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__title {
+            @include title;
+
+            margin-top: 110px;
+            margin-bottom: 20px;
+        }
+        &__subtitle {
+            @include subtitle;
+
+            margin-bottom: 136px;
+        }
+        &__content {
+            display: flex;
+
+            .content-photo-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__photo {}
+                &__pagination {
+                    
+                    margin-bottom: 140px;
+                }
+            }
+            .content-wrapper {
+                margin-top: 40px;
+                margin-left: 82px;
+                display: flex;
+                flex-direction: column;
+
+                .content-message {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: #eaeaec;
+                    margin-bottom: 50px;
+                   
+
+                    &__title {
+                        margin-top: 100px;
+                        margin-bottom: 30px;
+
+                        .name {
+                            @include font-description_title;
+
+                            font-size: 20px;
+                            font-weight: bold;
+                            line-height: 28px;
+                            letter-spacing: 0.06em;
+                            opacity: .95;
+                        }
+                        .profession {
+                            @include font-description_title;
+
+                            font-size: 15px;
+                            font-weight: 400;
+                            line-height: 28px;
+                            letter-spacing: 0.06em;
+                            opacity: .95;
+                            color: #787878;
+                            font-style: italic;
+                        }
+                    }
+                    &__text {
+                        @include font-content;
+
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 27px;
+                        letter-spacing: .06em;
+                        opacity: .7;
+                        width: 75%;
+                        text-align: center;
+                        margin-bottom: 40px;
+                    }
+
+                    ul {
+                        margin: 0 0 38px 0;
+                        padding: 0;
+                        list-style: none;
+                        display: flex;
+
+                        li {
+                            cursor:  pointer;
+                        }
+
+                        li + li { 
+                            padding-left: 7px;
+                        }
+                    }
+                }
+                .button-box {
+                    align-self: flex-end;
+                    
+
+                    .switch-button {
+                        background-color: #fff;
+                        padding: 18px 20px;
+                        border-radius: 3px;
+                        box-shadow: 0px 6px 11px 0px rgba(26, 27, 28, 0.1);
+
+                        & + .switch-button {
+                            margin-left: 30px;
+                        }
+                    }
+                    .switch-button:hover {
+                        background-color: #a4f6eb;
+                    }
+
+                }
+            }
+        }
+    }
 // ===  /feedback ===
 
-// ===  footer-top ===
-// ===  /footer-top ===
 
-// ===  footer-main ===
-// ===  /footer-main ===
+
+// ===  send-massage ===
+.section-send-message {
+    background: url(/img/section-send-message/background.png) no-repeat;
+    background-size: cover;
+
+    .section-inner {
+        display: flex;
+        padding: 120px 0 120px 0;
+
+    }
+
+    &-message-box {
+       background-color: rgba(84, 93, 101, 0.7) ;
+       box-shadow: 0px 0px 30px 0px rgba(28, 28, 28, 0.12);
+       width: 55%;
+       
+       
+        &-form {
+            
+
+            &__input {
+                padding-top: 25px;
+
+                input {
+                    @include font-content;
+
+                    width: 93%;
+                    border: none;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 51px;
+                    opacity: .6;
+                    background: rgba(84, 93, 101, 0);  
+                    margin-left: 30px;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                    outline: none;
+
+                    &::placeholder{ 
+                        color: $color-white;
+                    }
+
+                    &:focus{
+                        background: rgba(255, 255, 255 , .2);
+                        
+                        
+                    }
+                }
+                input::-webkit-input-placeholder {color: $color-white; }
+            }
+            .input-message {
+                padding-bottom: 70px;
+            }
+
+            &__button {
+                margin: 40px 0 40px 30px;
+                background-color: #9fede4;
+                padding: 18px 46px;
+                align-self: center;    
+                border: 1px solid rgba($color-black, .5) ;       
+                border-radius: 2px ;  
+                cursor: pointer;
+                width: 45%;
+            }
+
+        }
+    }
+    &-address-box {
+        margin-left: 26px;
+        background-color: rgba(84, 93, 101, 0.7) ;
+        box-shadow: 0px 0px 30px 0px rgba(28, 28, 28, 0.12);
+        width: 45%;
+
+        &-wrapper {
+            margin: 0 30px 30px 30px;
+
+            .text-info {
+                @include font-content;
+                
+                color: $color-white;
+                font-size: 15px;
+                line-height: 24px;
+                font-weight: 400;
+                opacity: .7;
+            }
+        }
+
+        .address-info {
+            margin-top: 36px;
+        }
+
+        .web-info {
+            margin-top: 50px;
+
+            a:visited {
+                color: $color-white;
+            }
+        }
+
+        .map {
+            
+        }
+
+    }
+}
+// ===  /send-massage ===
 
 // ===  footer-bottom ===
 // ===  /footer-bottom ===
