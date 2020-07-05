@@ -419,7 +419,7 @@ body{
             .item-1 {
                 @include item-wide;
 
-                background: url(/img/section-service/img1.png) no-repeat ;
+                background: url(../img/section-service/img1.png) no-repeat ;
                 background-size: cover;
 
                 .item-description {
@@ -431,7 +431,7 @@ body{
             .item-2 {
                 @include item-narrow;
 
-                background: url(/img/section-service/img2.png) no-repeat;
+                background: url(../img/section-service/img2.png) no-repeat;
                 background-size: cover;
 
                 .item-description {
@@ -443,7 +443,7 @@ body{
             .item-3 {
                 @include item-wide;
 
-                background: url(/img/section-service/img3.png) no-repeat ;
+                background: url(../img/section-service/img3.png) no-repeat ;
                 background-size:cover ;
 
                 .item-description {
@@ -455,7 +455,7 @@ body{
             .item-4 {
                 @include item-narrow;
 
-                background: url(/img/section-service/img4.png) no-repeat;
+                background: url(../img/section-service/img4.png) no-repeat;
                 background-size: cover;
 
                 .item-description {
@@ -467,7 +467,7 @@ body{
             .item-5 {
                 @include item-narrow;
 
-                background: url(/img/section-service/img5.png) no-repeat;
+                background: url(../img/section-service/img5.png) no-repeat;
                 background-size: cover;
 
                 .item-description {
@@ -479,7 +479,7 @@ body{
             .item-6 {
                 @include item-wide;
 
-                background: url(/img/section-service/img6.png) no-repeat ;
+                background: url(../img/section-service/img6.png) no-repeat ;
                 background-size: cover;
 
                 .item-description {
@@ -537,7 +537,7 @@ body{
                 &-info {
                     display: flex;
                     flex-direction: column;
-                    background: url(/img/section-team/info.png) no-repeat;
+                    background: url(../img/section-team/info.png) no-repeat;
                     background-size: cover;
                     flex-basis: 335px;
                     position: absolute;
@@ -801,7 +801,7 @@ body{
             }
 
             &__button {
-                margin: 40px 0 40px 30px;
+                margin: 60px 0 30px 30px;
                 background-color: #9fede4;
                 padding: 18px 46px;
                 align-self: center;    
@@ -838,7 +838,7 @@ body{
         }
 
         .web-info {
-            margin-top: 50px;
+            margin-top: 20px;
 
             a:visited {
                 color: $color-white;
@@ -846,7 +846,7 @@ body{
         }
 
         .map {
-            
+            margin-top: 30px;
         }
 
     }

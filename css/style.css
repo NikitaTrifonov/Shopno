@@ -577,42 +577,42 @@ body {
       list-style: none; }
       .section-service__content .items-box .item-1 {
         flex-basis: 652px;
-        background: url(/img/section-service/img1.png) no-repeat;
+        background: url(../img/section-service/img1.png) no-repeat;
         background-size: cover; }
         .section-service__content .items-box .item-1 .item-description {
           margin-top: 184px;
           width: 65%; }
       .section-service__content .items-box .item-2 {
         flex-basis: 474px;
-        background: url(/img/section-service/img2.png) no-repeat;
+        background: url(../img/section-service/img2.png) no-repeat;
         background-size: cover; }
         .section-service__content .items-box .item-2 .item-description {
           margin-top: 184px;
           width: 70%; }
       .section-service__content .items-box .item-3 {
         flex-basis: 652px;
-        background: url(/img/section-service/img3.png) no-repeat;
+        background: url(../img/section-service/img3.png) no-repeat;
         background-size: cover; }
         .section-service__content .items-box .item-3 .item-description {
           margin-top: 165px;
           width: 65%; }
       .section-service__content .items-box .item-4 {
         flex-basis: 474px;
-        background: url(/img/section-service/img4.png) no-repeat;
+        background: url(../img/section-service/img4.png) no-repeat;
         background-size: cover; }
         .section-service__content .items-box .item-4 .item-description {
           margin-top: 165px;
           width: 70%; }
       .section-service__content .items-box .item-5 {
         flex-basis: 474px;
-        background: url(/img/section-service/img5.png) no-repeat;
+        background: url(../img/section-service/img5.png) no-repeat;
         background-size: cover; }
         .section-service__content .items-box .item-5 .item-description {
           margin-top: 130px;
           width: 55%; }
       .section-service__content .items-box .item-6 {
         flex-basis: 652px;
-        background: url(/img/section-service/img6.png) no-repeat;
+        background: url(../img/section-service/img6.png) no-repeat;
         background-size: cover; }
         .section-service__content .items-box .item-6 .item-description {
           margin-top: 130px;
@@ -662,7 +662,7 @@ body {
     .section-team__content .items-box .item-info {
       display: flex;
       flex-direction: column;
-      background: url(/img/section-team/info.png) no-repeat;
+      background: url(../img/section-team/info.png) no-repeat;
       background-size: cover;
       flex-basis: 335px;
       position: absolute;
@@ -843,7 +843,7 @@ body {
     .section-send-message-message-box-form .input-message {
       padding-bottom: 70px; }
     .section-send-message-message-box-form__button {
-      margin: 40px 0 40px 30px;
+      margin: 60px 0 30px 30px;
       background-color: #9fede4;
       padding: 18px 46px;
       align-self: center;
@@ -868,6 +868,8 @@ body {
     .section-send-message-address-box .address-info {
       margin-top: 36px; }
     .section-send-message-address-box .web-info {
-      margin-top: 50px; }
+      margin-top: 20px; }
       .section-send-message-address-box .web-info a:visited {
         color: #ffffff; }
+    .section-send-message-address-box .map {
+      margin-top: 30px; }
