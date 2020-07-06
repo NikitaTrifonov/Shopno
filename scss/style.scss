@@ -399,7 +399,6 @@ body{
 
         margin-top: 124px;
         margin-bottom: 16px;
-        
     }
     &__subtitle {
         @include subtitle;
@@ -569,6 +568,10 @@ body{
                         opacity: .6;
                         i {
                             cursor: pointer;
+
+                            &:hover {
+                                transform: scale(1.1);
+                            }
                         }
                     }
                     a + a {
@@ -596,12 +599,10 @@ body{
                         color: #746f6f;
                     }
                     
-                   
                    .wrapper {
                        margin-top: 65px;
                        margin-left: 40px;
                        width: 70%;
-                       
                    }
                 }
 
@@ -613,7 +614,6 @@ body{
             .item:hover .item-info{
                 opacity: 1;
                 visibility: visible;
-                
             }
         }
     }
@@ -723,7 +723,6 @@ body{
                 }
                 .button-box {
                     align-self: flex-end;
-                    
 
                     .switch-button {
                         background-color: #fff;
@@ -759,13 +758,12 @@ body{
     }
 
     &-message-box {
+
        background-color: rgba(84, 93, 101, 0.7) ;
        box-shadow: 0px 0px 30px 0px rgba(28, 28, 28, 0.12);
        width: 55%;
        
-       
         &-form {
-            
 
             &__input {
                 padding-top: 25px;
@@ -790,8 +788,6 @@ body{
 
                     &:focus{
                         background: rgba(255, 255, 255 , .2);
-                        
-                        
                     }
                 }
                 input::-webkit-input-placeholder {color: $color-white; }
@@ -848,10 +844,87 @@ body{
         .map {
             margin-top: 30px;
         }
-
     }
 }
 // ===  /send-massage ===
 
-// ===  footer-bottom ===
-// ===  /footer-bottom ===
+// ===  footer ===
+
+.section-footer {
+    background-color: #2c2f32;
+
+    .section-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        @include font-content;
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0.01em;
+        color: $color-white;
+        opacity: .8;
+        margin-top: 93px;
+        margin-bottom: 19px;
+        text-transform: uppercase;
+    }
+
+    &__link {
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                cursor: pointer;
+                
+                background-color: rgba(255, 255, 255, 0.2);
+                padding: 8px 0 ;
+                text-align: center;
+                width: 45px;
+
+                a {
+                    .fab {
+                        font-size: 23px;
+                        color: #f8f4f4;
+                        opacity: .7;
+                    }
+                }
+                a:visited {
+                    color: #f8f4f4;
+                }
+
+               & + li {
+                   margin-left: 8px;
+               } 
+
+               &:hover {
+                background-color: #46cfbd;
+                .fab {
+                    color: $color-black;
+                    opacity: .95;
+                }
+               }
+            }
+        }
+    }
+
+    &__copyright {
+        @include font-content;
+
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: .01em;
+        color: $color-white;
+        opacity: .4;
+        margin: 43px 0 93px 0 ;
+    }
+}
+// ===  /footer ===
