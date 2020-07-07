@@ -813,7 +813,7 @@ body {
           background-color: #a4f6eb; }
 
 .section-send-message {
-  background: url(/img/section-send-message/background.png) no-repeat;
+  background: url(../img/section-send-message/background.png) no-repeat;
   background-size: cover; }
   .section-send-message .section-inner {
     display: flex;
