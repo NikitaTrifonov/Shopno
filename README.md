@@ -1,6 +1,8 @@
 # Shopno
 Верстка лендинг-страницы  по макету.
 
+https://nikitatrifonov.github.io/Shopno/
+
 
 ## Использовано
 Html, Css, Sass, gulp
